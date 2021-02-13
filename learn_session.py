@@ -1,6 +1,7 @@
 import datetime
 from flask import Blueprint, render_template, request, url_for, flash, redirect
 from util import get_all_items, get_all_ue, get_all_college, get_db_connection, get_all_lss, get_all_items, get_items
+import google_auth
 
 import pprint
 
@@ -11,6 +12,7 @@ ls_filename = 'ls.csv'
 lc_filename = 'list_college.csv'
 
 @my_ls.route(f'{ls_prefix}/create', methods=('GET', 'POST'))
+@google_auth.authenticated
 def create():
     if request.method == 'POST':
         new_row = {'day':       request.form.get('day'),
@@ -39,12 +41,14 @@ def create():
         return render_template('ls/create.html', ues=ues, colleges=colleges, items=items)
 
 @my_ls.route(f'{ls_prefix}/', methods=('GET', ))
+@google_auth.authenticated
 def index():
     lss = get_all_lss()
     return render_template('ls/index.html', row_data=lss)
 
 
 @my_ls.route(f'{ls_prefix}/get-items-for-ue', methods=('POST', ))
+@google_auth.authenticated
 def get_list_items_for_ue():
     list_items = []
     if request.method == 'POST':

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Liste des Items {% endblock %}</h1>
+    <div class="text-center">
+        <a href="{{ url_for('google_auth.login') }}" class="btn btn-info center-block" role="button">Se connecter avec un compte Google</a>
+    </div>
+
+{% endblock %}
+

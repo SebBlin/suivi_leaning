@@ -1,16 +1,22 @@
 import my_stat
-from learn_session import my_ls
 from flask import Flask, render_template, request, url_for, flash, redirect
 import pprint
 from util import generate_date_range_from_ls, get_all_lss, get_all_lss_per_items, get_db_connection, get_all_items
 import json
+import os
 
+import learn_session
+import google_auth
+
+print(__name__)
 app = Flask(__name__)
-app.register_blueprint(my_ls)
+app.secret_key = os.environ.get("FN_FLASK_SECRET_KEY", default=False)
 
-app.config['SECRET_KEY'] = 'my secret key'
+app.register_blueprint(learn_session.my_ls)
+app.register_blueprint(google_auth.app)
 
 @app.route('/')
+@google_auth.authenticated
 def index():
     # Sho all items with Learning session 
     list_items = get_all_items()
@@ -18,6 +24,11 @@ def index():
     liste_date = generate_date_range_from_ls()
     print(json.dumps(list_ls, indent=2))
     return render_template('index.html', items=list_items, ls=list_ls, date_range=liste_date)
+
+@app.route('/noauth')
+def noauth():
+    return render_template('landing_login.html')
+
 
 @app.route('/<int:post_id>')
 def post(post_id):
