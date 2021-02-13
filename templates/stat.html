@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Mes statistiques{% endblock %}</h1>
+    {% block list %}
+    <div class="form-floating">
+        <label for="floatingSelect">Works with selects</label><br>
+        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+          <option selected>Open this select menu</option>
+          {% for ue in row_data %}
+          <option value="{{ loop.index }}">{{ ue.1 }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endblock %}
+
+    
+
+{% endblock %}
+

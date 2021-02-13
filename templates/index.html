@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Liste des Items {% endblock %}</h1>
+    <div class="">
+        <table id="example" class="display compact nowrap">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                {% for date in date_range %}
+                    <th class="rotated-text" scope="col"><div><span>{{ date }}</span></div></th>
+                {% endfor %}
+
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in items %}
+                <tr>
+                  <th scope="col">{{ row.item_id }}</th>
+                  <td>{{ row.item_name }}</th>
+                  {% for date in date_range %}
+                    {% if ls[row.item_id] and ls[row.item_id][date] %}
+                        <td scope="col" class="text-center bgc-{{ ls[row.item_id][date].serieux }}"><!-- {{ ls[row.item_id][date].id|e }} --> </td>
+                    {% else %}
+                      <td scope="col"></td>
+                    {% endif %}
+                  {% endfor %}
+
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+
+{% endblock %}
+

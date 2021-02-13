@@ -1,0 +1,34 @@
+id;college
+C1;Cardio 
+C2;Pneumo
+C3;Infectio
+C4;Anapath
+C5;Anesthésie Réa
+C6;Cancéro
+C7;Chirurgie Maxillo Faciale et stomato
+C8;Dermato
+C9;Endocrino
+C10;Gériatrie
+C11;Hémato
+C12;Gynéco-Ob
+C13;HGE
+C14;Immuno
+C15;Imagerie
+C16;Medecine interne
+C17;Médecine légale/Travail
+C18;Medecine intensive /urgence
+C19;MPR
+C20;Néphro
+C21;Neuro
+C22;Neurochir
+C23;Nutrition
+C24;Ophtalmo
+C25;ORL
+C26;Ortho
+C27;Ped
+C28;Pharmaco
+C29;Psy addicto
+C30;Rhumato
+C31;Santé publique
+C32;Soins pall
+C33;Urgences

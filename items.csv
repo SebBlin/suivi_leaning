@@ -1,0 +1,368 @@
+﻿ue_id;id;item
+UE1;1;La relation médecin malade
+UE1;2;Les valeurs professionnelles du médecin et des autres professions de santé
+UE1;3;Le raisonnement et la décision en médecine
+UE1;4;La sécurité du patient
+UE1;5;La gestion des erreurs et des plaintes : l'aléa thérapeutique
+UE1;6;L'organisation de l'exercice clinique et les méthodes qui permettent de sécuriser le parcours du patient
+UE1;7;Les droits individuels et collectifs du patient
+UE2;8;Les discriminations
+UE3;9;Éthique médicale
+UE4;10;Approche transversale du corps
+UE5;11;violences et santé
+UE6;12;violences sexuelles
+UE7;13;La mort
+UE8;14;Certificats médicaux. Décès et législation. Prélèvements d'organes et législation
+UE9;15;Soins psychiatriques sans consentement
+UE10;16;Orga du système de soins
+UE11;17;Telemedecine, télésanté, téléservices en santé
+UE12;18;santé et numérique
+UE13;19;La sécurité sociale. L'assurance maladie. Les assurances complémentaires
+UE14;20;La méthodologie de la recherche expérimentale et clinique
+UE15;21;Mesure de l'état de santé de la population
+UE16;22;Maladies rares
+UE2;23;Grossesse normale
+UE2;24;Principales complications de la grossesse
+UE2;25;Grossesse extra-utérine
+UE2;26;Douleur abdominale aiguë chez une femme enceinte
+UE2;27;Prévention des risques foetaux : infection, médicaments, toxiques, irradiation
+UE2;28;Connaître les particularités de l'infection urinaire au cours de la grossesse
+UE2;29;Connaître les principaux risques professionnels pour la maternité, liés au travail de la mère.
+UE2;30;Prématurité et retard de croissance intra-utérin
+UE2;31;Accouchement, délivrance et suites de couches normales
+UE2;32;Évaluation et soins du nouveau-né à terme
+UE2;33;Allaitement maternel
+UE2;34;Suites de couches pathologiques : pathologie maternelle dans les 40 jours
+UE2;35;Anomalies du cycle menstruel. Métrorragies
+UE2;36;Contraception
+UE2;37;Interruption volontaire de grossesse
+UE2;38;Stérilité du couple : conduite de la première consultation
+UE2;39;Assistance médicale à la procréation
+UE2;40;Algies pelviennes chez la femme
+UE2;41;Endométriose
+UE2;42;Aménorrhée
+UE2;43;Hémorragie génitale chez la femme
+UE2;44;Tuméfaction pelvienne chez la femme
+UE2;45;spécificité des maladies génétiques
+UE2;46;medecine génomique
+UE3;47;Suivi d'un nourrisson, d'un enfant et d'un adolescent normal
+UE3;48;Alimentation et besoins nutritionnels du nourrisson et de l'enfant
+UE3;49;Puberté normale et pathologique
+UE3;50;Pathologie génito-scrotale chez le garçon et chez l'homme
+UE3;51;Troubles de la miction chez l'enfant
+UE3;52;Strabisme et amblyopie de l'enfant
+UE3;53;Retard de croissance staturo-pondérale
+UE3;54;Boiterie chez l'enfant
+UE3;55;Développement psychomoteur du nourrisson et de l'enfant
+UE3;56;L'enfant handicapé
+UE3;57;Maltraitance et enfants en danger
+UE3;58;Sexualité normale et ses troubles
+UE3;59;Sujets en situation de précarité
+UE3;60;Connaître les facteurs de risque, prévention, dépistage des troubles psychiques de l'enfant à la personne agée
+UE3;61;Connaître les bases des classifications des troubles mentaux de l'enfant à la personne âgée
+UE3;62;Décrire l'organisation de l'offre de soins en psychiatrie, de l'enfant à la personne âgée
+UE3;63;Trouble schizophrénique de l'adolescent et de l'adulte
+UE3;64;Trouble bipolaire de l'adolescent et de l'adulte
+UE3;65;Trouble délirant persistant
+UE3;66;Diagnostiquer des troubles
+UE3;67;Troubles envahissants du développement
+UE3;68;Troubles du comportement de l'adolescent
+UE3;69;Troubles psychiques de la grossesse et du post-partum
+UE3;70;Troubles psychiques du sujet âgé
+UE3;71;Troubles des conduites alimentaires chez l'adolescent et l'adulte
+UE3;72;Troubles somatoformes à tous les âges
+UE3;73;Différents types de techniques psychothérapeutiques
+UE3;74;Prescription et surveillance des psychotropes
+UE3;75;Addiction au tabac
+UE3;76;Addiction à l'alcool
+UE3;77;Addiction aux médicaments psychotropes
+UE3;78;Addiction au cannabis, à la cocaïne, aux amphétamines, aux opiacés, aux drogues de synthèse
+UE3;79;Addictions comportementales
+UE3;80;Dopage
+UE4;81;Altération de la fonction visuelle
+UE4;82;Anomalie de la vision d'apparition brutale
+UE4;83;OEil rouge et/ou douloureux
+UE4;84;Glaucome chronique
+UE4;85;Troubles de la réfraction
+UE4;86;Pathologie des paupières
+UE4;87;Epistaxis
+UE4;88;Trouble aigu de la parole. Dysphonie
+UE4;89;Altération de la fonction auditive
+UE4;90;Pathologie des glandes salivaires
+UE4;91;Déficit neurologique récent
+UE4;92;Déficit moteur et/ou sensitif des membres
+UE4;93;Compression médullaire non traumatique et syndrome de la queue de cheval
+UE4;94;Rachialgie
+UE4;95;Radiculalgie et syndrome canalaire
+UE4;96;Neuropathies périphériques
+UE4;97;Polyradiculonévrite aiguë inflammatoire (syndrome de Guillain-Barré)
+UE4;98;Myasthénie
+UE4;99;Migraine, névralgie du trijumeau et algies de la face
+UE4;100;Céphalée aiguë et chronique chez l'adulte et l'enfant
+UE4;101;Paralysie faciale
+UE4;102;Diplopie
+UE4;103;Vertige
+UE4;104;Sclérose en plaques
+UE4;105;Épilepsie de l'enfant et de l'adulte
+UE4;106;Maladie de Parkinson
+UE4;107;Mouvements anormaux
+UE4;108;Confusion, démences
+UE4;109;Troubles de la marche et de l'équilibre
+UE4;110;Troubles du sommeil de l'enfant et de l'adulte
+UE4;111;Dermatoses faciales : acné, rosacée, dermatite séborrhéique
+UE4;112;Dermatose bulleuse touchant la peau et/ou les muqueuses externes
+UE4;113;Hémangiomes et malformations vasculaires cutanées
+UE4;114;Exanthème et érythrodermie de l'adulte et de l'enfant
+UE4;115;Toxidermies
+UE4;116;Prurit
+UE4;117;Psoriasis
+UE5;118;La personne handicapée : bases de l'évaluation fonctionnelle et thérapeutique
+UE5;119;soins et accompagnement dans la maladie chromnique et le handicap
+UE5;120;complication de l'immobilité et du décubitus
+UE5;121;Le handicap psychique
+UE5;122;Principales techniques de rééducation et de réadaptation
+UE5;123;Vieillissement normal
+UE5;124;Ménopause, insuff ovarienne prématurée, andropause, déficit androgénique lié à l'âge
+UE5;125;Troubles de la miction et incontinence urinaire de l'adulte et du sujet âgé
+UE5;126;Trouble de l'érection
+UE5;127;Hypertrophie bénigne de la prostate
+UE5;128;Ostéopathies fragilisantes
+UE5;129;Arthrose
+UE5;130;La personne âgée malade : particularités sémiologiques, psychologiques et thérapeutiques
+UE5;131;Troubles de la marche et de l'équilibre
+UE5;132;Troubles cognitifs du sujet âgé
+UE5;133;Autonomie et dépendance chez le sujet âgé
+UE5;134;Bases neurophysiologiques, mécanismes physiopathologiques d'une douleur aiguë et d'une douleur chronique
+UE5;135;Thérapeutiques antalgiques, médicamenteuses et non médicamenteuses
+UE5;136;Anesthésie locale, locorégionale et générale
+UE5;137;Douleur chez l'enfant : évaluation et traitements antalgiques
+UE5;138;douleur chez la personne vulnérable
+UE5;139;Soins palliatifs pluridisciplinaires : Modalités d'organisation des équipes, en établissement de santé et en et en ambulatoire
+UE5;140;Soins palliatifs pluridisciplinaires : Accompagnement de la personne malade et de son entourage
+UE5;141;Soins palliatifs pluridisciplinaires : La sédation pour détresse en phase terminale et dans des situations spécifiques…
+UE5;142;Connaître les aspects spécifiques des soins palliatifs en pédiatrie
+UE5;143;Connaître les aspects spécifiques des soins palliatifs en réanimation
+UE5;144;Deuil normal et pathologique
+UE6;145;Surveillance des maladies infectieuses transmissibles
+UE6;146;Vaccinations
+UE6;147;Fièvre aiguë chez l'enfant et l'adulte
+UE6;148;Infections naso-sinusiennes de l'adulte et de l'enfant
+UE6;149;Angines de l'adulte et de l'enfant et rhinopharyngites de l'enfant
+UE6;150;Otites infectieuses de l'adulte et de l'enfant
+UE6;151;Méningites, méningoencéphalites chez l'adulte et l'enfant
+UE6;152;Endocardite infectieuse
+UE6;153;Surveillance des porteurs de valve et prothèses vasculaires
+UE6;154;Infections broncho pulmonaires communautaires de l'adulte et de l'enfant
+UE6;155;Infections cutanéo-muqueuses et des phanères, bactériennes et mycosiques de l'adulte et de l'enfant
+UE6;156;Infections ostéo articulaires (IOA) de l'enfant et de l'adulte
+UE6;157;Septicémie/Bactériémie/Fongémie de l'adulte et de l'enfant
+UE6;158;septis et choc septique de l'enfant et de l'adulte
+UE6;159;Tuberculose de l'adulte et de l'enfant
+UE6;160;Tétanos
+UE6;161;Infections urinaires de l'enfant et de l'adulte
+UE6;162;Infections sexuellement transmissibles
+UE6;163;Coqueluche
+UE6;164;Exanthèmes fébriles de l'enfant
+UE6;165;Oreillons
+UE6;166;Grippe
+UE6;167;Hépatites virales
+UE6;168;Infections à herpès virus du sujet immunocompétent
+UE6;169;Infections à VIH
+UE6;170;Paludisme
+UE6;171;Gale et pédiculose
+UE6;172;Parasitoses digestives
+UE6;173;Zoonoses
+UE6;174;Pathologie infectieuse chez les migrants adultes et enfants
+UE6;175;Voyage en pays tropical de l'adulte et de l'enfant
+UE6;176;Diarrhées infectieuses de l'adulte et de l'enfant
+UE6;177;Prescription et surveillance des anti-infectieux chez l'adulte et l'enfant
+UE6;178;Risques émergents, bioterrorisme, maladies hautement transmissibles
+UE6;179;Risques sanitaires liés à l'eau et à l'alimentation
+UE6;180;Risques sanitaires liés aux irradiations. Radioprotection
+UE6;181;La sécurité sanitaire des produits destinés à l'homme
+UE6;182;Environnement professionnel et santé au travail
+UE6;183;Organisation de la médecine du travail. Prévention des risques professionnels
+UE6;184;Accidents du travail et maladies professionnelles
+UE7;185;Réaction inflammatoire
+UE7;186;Hypersensibilités et allergies chez l'enfant et l'adulte
+UE7;187;Hypersensibilités et allergies cutanéomuqueuses chez l'enfant et l'adulte
+UE7;188;Hypersensibilité et Allergies respiratoires chez l'enfant et chez l'adulte
+UE7;189;Déficit immunitaire
+UE7;190;Fièvre prolongée
+UE7;191;Fièvre chez un patient immunodéprimé
+UE7;192;Pathologies auto-immunes : aspects épidémiologiques, diagnostiques et principes de traitement
+UE7;193;Connaître les principaux types de vascularite systémique
+UE7;194;Lupus érythémateux disséminé. Syndrome des anti-phospholipides
+UE7;195;Artérite à cellules géantes
+UE7;196;Polyarthrite rhumatoïde
+UE7;197;Spondylarthrite inflammatoire.
+UE7;198;Arthropathie microcristalline
+UE7;199;Syndrome douloureux régional complexe (ex algodystrophie)
+UE7;200;Douleur et épanchement articulaire. Arthrite d'évolution récente
+UE7;201;Transplantation d'organes
+UE7;202;Biothérapies et thérapies ciblées
+UE7;203;Dyspnée aiguë et chronique
+UE7;204;Toux chez l'enfant et chez l'adulte
+UE7;205;Hémoptysie
+UE7;206;Épanchement pleural
+UE7;207;Opacités et masses intra-thoraciques chez l'enfant et chez l'adulte
+UE7;208;Insuffisance respiratoire chronique
+UE7;209;Bronchopneumopathie chronique obstructive chez l'adulte et l'enfant
+UE7;210;Pneumopathie interstitielle diffuse
+UE7;211;Sarcoïdose
+UE7;212;Hémogramme chez l'adulte et l'enfant
+UE7;213;Anémie chez l'adulte et l'enfant
+UE7;214;Thrombopénie chez l'adulte et l'enfant
+UE7;215;Purpuras chez l'adulte et l'enfant
+UE7;216;Syndrome hémorragique d'origine hématologique
+UE7;217;Syndrome mononucléosique
+UE7;218;Éosinophilie
+UE7;219;Pathologie du fer chez l'adulte et l'enfant
+UE7;220;Adénopathie superficielle de l'adulte et de l'enfant
+UE8;221;Athérome : épidémiologie et physiopathologie. Le malade poly-athéromateux
+UE8;222;Facteurs de risque cardio-vasculaire et prévention
+UE8;223;Dyslipidémies
+UE8;224;Hypertension artérielle de l'adulte et de l'enfant
+UE8;225;"Artériopathie oblitérante de l'aorte, des artères viscérales et des membres inférieurs ; anévrysmes"
+UE8;226;Thrombose veineuse profonde et embolie pulmonaire
+UE8;227;Insuffisance veineuse chronique et varices
+UE8;228;Ulcère de jambe
+UE8;229;Surveillance et complications des abords veineux
+UE8;230;Douleur thoracique aiguë et chronique
+UE8;231;Électrocardiogramme : indications et interprétations
+UE8;232;Fibrillation atriale
+UE8;233;Valvulopathies
+UE8;234;Insuffisance cardiaque de l'adulte
+UE8;235;Péricardite aiguë
+UE8;236;Troubles de la conduction intracardiaque
+UE8;237;Palpitations
+UE8;238;Souffle cardiaque chez l'enfant
+UE8;239;Acrosyndromes
+UE8;240;Hypoglycémie chez l'adulte et l'enfant
+UE8;241;Goitre, nodules thyroïdiens et cancers thyroïdiens
+UE8;242;Hyperthyroïdie
+UE8;243;Hypothyroïdie
+UE8;244;Adénome hypophysaire
+UE8;245;Insuffisance surrénale chez l'adulte et l'enfant
+UE8;246;Gynécomastie
+UE8;247;Diabète sucré de types 1 et 2 de l'enfant et de l'adulte
+UE8;248;Prévention primaire par la nutrition chez l'adulte et l'enfant
+UE8;249;Modifications thérapeutiques du mode de vie
+UE8;250;Dénutrition chez l'adulte et l'enfant
+UE8;251;Amaigrissement à tous les âges
+UE8;252;Troubles nutritionnels chez le sujet âgé
+UE8;253;Obésité de l'enfant et de l'adulte
+UE8;254;Nutrition et grossesse
+UE8;255;diabete gestationnel
+UE8;256;"Aptitude au sport chez l'adulte et l'enfant ; besoins nutritionnels chez le sportif"
+UE8;257;Oedèmes des membres inférieurs localisés ou généralisés
+UE8;258;Élévation de la créatininémie
+UE8;259;Protéinurie et syndrome néphrotique de chez l'l'adulte et de l'enfant
+UE8;260;Hématurie
+UE8;261;Néphropathie glomérulaire
+UE8;262;Néphropathie interstitielle
+UE8;263;Néphropathie vasculaire
+UE8;264;Insuffisance rénale chronique chez l'adulte et l'enfant
+UE8;265;Lithiase urinaire
+UE8;266;Polykystose rénale
+UE8;267;Troubles de l'équilibre acido-basique et désordres hydro-électrolytiques
+UE8;268;Hypercalcémie
+UE8;269;Douleurs abdominales et lombaires aiguës chez l'enfant et chez l'adulte
+UE8;270;Douleurs lombaires aigues
+UE8;271;Reflux gastro-oesophagien chez le nourrisson, chez l'enfant et chez l'adulte. Hernie hiatale
+UE8;272;Ulcère gastrique et duodénal. Gastrite
+UE8;273;Dysphagie
+UE8;274;Vomissements du nourrisson, de l'enfant et de l'adulte
+UE8;275;Splénomégalie
+UE8;276;Hépatomégalie et masse abdominale
+UE8;277;Lithiase biliaire et complications
+UE8;278;Ictère
+UE8;279;Cirrhose et complications
+UE8;280;Ascite
+UE8;281;Pancréatite chronique
+UE8;282;Maladies Inflammatoires Chroniques de l'Intestin (MICI) chez l'adulte et l'enfant
+UE8;283;Constipation chez l'enfant et l'adulte
+UE8;284;Colopathie fonctionnelle
+UE8;285;Diarrhée chronique chez l'adulte et l'enfant
+UE8;286;Diarrhée aiguë et déshydratation chez le nourrisson, l'enfant et l'adulte
+UE8;287;Diverticulose colique et diverticulite aiguë du sigmoïde
+UE8;288;Pathologie hémorroïdaire
+UE8;289;Hernie pariétale chez l'enfant et l'adulte
+UE9;290;Épidémiologie, facteurs de risque, prévention et dépistage des cancers
+UE9;291;Cancer : cancérogénèse, oncogénétique
+UE9;292;Diagnostic des cancers : signes d'appel et investigations para-cliniques
+UE9;293;Le médecin préleveur de cellules et/ou de tissus pour des examens d'Anatomie et Cytologie pathologiques
+UE9;294;Traitement des cancers
+UE9;295;Prise en charge et accompagnement d'un malade cancéreux à tous les stades de la maladie
+UE9;296;Agranulocytose médicamenteuse
+UE9;297;Cancer de l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques
+UE9;298;Tumeurs de la cavité buccale, naso-sinusiennes et du cavum, et des voies aérodigestives supérieures
+UE9;299;Tumeurs intracrâniennes
+UE9;300;Tumeurs du col utérin, tumeur du corps utérin
+UE9;301;Tumeurs du colon et du rectum
+UE9;302;Tumeurs cutanées, épithéliales et mélaniques
+UE9;303;Tumeurs de l'estomac
+UE9;304;Tumeurs du foie, primitives et secondaires
+UE9;305;Tumeurs de l'oesophage
+UE9;306;Tumeurs de l'ovaire
+UE9;307;Tumeurs des os primitives et secondaires
+UE9;308;Tumeurs du pancréas
+UE9;309;Tumeurs du poumon, primitives et secondaires
+UE9;310;Tumeurs de la prostate
+UE9;311;Tumeurs du rein
+UE9;312;Tumeurs du sein
+UE9;313;Tumeurs du testicule
+UE9;314;Tumeurs vésicales
+UE9;315;Leucémies aiguës
+UE9;316;Syndromes myélodysplasiques
+UE9;317;Syndromes myéloprolifératifs
+UE9;318;Leucémies lymphoïdes chroniques
+UE9;319;Lymphomes malins
+UE9;320;Myélome multiple des os
+UE10;321;Principe du bon usage du médicament et des thérapeutiques non médicamenteuses
+UE10;322;La décision thérapeutique personnalisée : bon usage dans des situations à risque
+UE10;323;Analyser et utiliser les résultats des études cliniques dans la perspective du bon usage
+UE10;324;Éducation thérapeutique, observance et automédication
+UE10;325;Identification et gestion des risques liés aux médicaments et aux biomatériaux
+UE10;326;Cadre réglementaire de la prescription thérapeutique et recommandations pour le bon usage
+UE10;327;Principes de la médecine intégrative
+UE10;328;Thérapeutiques non médicamenteuses et dispositifs médicaux
+UE10;329;connaitre les caractéristique des porduits sanguins labiles et leurs spécificité
+UE10;330;Prescription et surveillance des classes de médicaments les plus courantes chez l'adulte et chez l'enfant
+UE11;331;Arrêt cardio-circulatoire
+UE11;332;État de choc
+UE11;333;situation exceptionnelles
+UE11;334;Prise en charge immédiate pré-hospitalière et à l'arrivée à l'hôpital
+UE11;335;Orientation diagnostique et conduite à tenir devant un traumatisme cranio-facial
+UE11;336;Coma non traumatique chez l'adulte et chez l'enfant
+UE11;337;Principales intoxications aiguës
+UE11;338;Oedème de Quincke et anaphylaxie
+UE11;339;Syndromes coronariens aigus
+UE11;340;Accidents vasculaires cérébraux
+UE11;341;Hémorragie méningée
+UE11;342;Malaise, perte de connaissance, crise comitiale chez l'adulte
+UE11;343;État confusionnel et trouble de conscience chez l'adulte et chez l'enfant
+UE11;344;Prise en charge d'une patiente atteinte de pré-éclampsie
+UE11;345;Malaise grave du nourrisson et mort subite
+UE11;346;Convulsions chez le nourrisson et chez l'enfant
+UE11;347;Rétention aiguë d'urine
+UE11;348;Insuffisance rénale aiguë - Anurie
+UE11;349;Infection aiguë des parties molles (abcès, panaris, phlegmon des gaines)
+UE11;350;Grosse jambe rouge aiguë
+UE11;351;Agitation et délire aiguë
+UE11;352;Crise d'angoisse aiguë et attaque de panique
+UE11;353;Risque et conduite suicidaires chez l'enfant, l'adolescent et l'adulte : identification et prise en charge
+UE11;354;Syndrome occlusif de l'enfant et de l'adulte
+UE11;355;Hémorragie digestive
+UE11;356;Appendicite de l'enfant et de l'adulte
+UE11;357;Péritonite aiguë chez l'enfant et chez l'adulte
+UE11;358;Pancréatite aiguë
+UE11;359;Détresse respiratoire aigüe du nourrisson, de l'enfant et de l'adulte
+UE11;360;Pneumothorax
+UE11;361;Lésions péri-articulaires et ligamentaires du genou, de la cheville et de l'épaule
+UE11;362;Prothèses et ostéosynthèses
+UE11;363;Fractures fréquentes de l'adulte et du sujet âgé
+UE11;364;Fractures chez l'enfant : particularités épidémiologiques, diagnostiques et thérapeutiques
+UE11;365;Surveillance d'un malade sous plâtre/résine
+UE11;366;Exposition accidentelle aux liquides biologiques : conduite à tenir
+UE11;367;Impact de l'environnement sur la santé

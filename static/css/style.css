@@ -1,0 +1,56 @@
+html {
+    padding: 20px;
+
+}
+
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+th.rotated-text {
+    height: 140px;
+    white-space: nowrap;
+    /* padding: 0 ; */
+}
+
+th.rotated-text > div > * { 
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 0; 
+}
+/* see https://codepen.io/placenamehere/pen/ZBQrzm */
+
+ /* see colo generator https://coolors.co/f94144-f3722c-f68425-f8961e-f9af37-f9c74f-90be6d-43aa8b-4d908e-577590 */
+.bgc-1 {
+    background-color:#F94144;
+}
+.bgc-2 {
+    background-color:#F3722C;
+}
+.bgc-3 {
+    background-color:#F68425;
+}
+.bgc-4 {
+    background-color:#F8961E;
+}
+.bgc-5 {
+    background-color:#F9AF37;
+}
+.bgc-6 {
+    background-color:#F9C74F;
+}
+.bgc-7 {
+    background-color:#90BE6D;
+}
+.bgc-8 {
+    background-color:#43AA8B;
+}
+.bgc-9 {
+    background-color:#4D908E;
+}
+.bgc-10 {
+    background-color:#577590;
+}

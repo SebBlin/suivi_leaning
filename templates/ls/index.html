@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} List des Learning Sessions {% endblock %}</h1>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">date</th>
+                <th scope="col">UE</th>
+                <th scope="col">College</th>
+                <th scope="col">Item</th>
+                <th scope="col">Serieux</th>
+                <th scope="col">Rang A</th>
+                <th scope="col">Rang B</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for row in row_data %}
+                <tr>
+                  <th scope="col">{{ row.id }}</th>
+                  <td>{{ row['date'] }}</th>
+                  <td>{{ row['ue_id'] }}</th>
+                  <td>{{ row['college_name'] }}</th>
+                  <td>{{ row['item_id'] }} - {{ row['item_name'] }}</th>
+                  <td>{{ row['serieux'] }}</th>
+                  <td>{{ row['rang_a'] }}</th>
+                  <td>{{ row['rang_b'] }}</th>
+                  </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+{% endblock %}
+
