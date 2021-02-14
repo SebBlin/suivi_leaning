@@ -1,62 +1,66 @@
-import sqlite3
 import json
 from datetime import timedelta, date
 from werkzeug.exceptions import abort
 
+from sqlalchemy import Table, insert, MetaData
+import manage_db
 
+engine = None
 
-def get_db_connection():
-    conn = sqlite3.connect('database.db')
-    conn.row_factory = sqlite3.Row
+def get_db_engine():
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    conn = manage_db.init_connection_engine()
     return conn
 
 def get_post(post_id):
-    conn = get_db_connection()
-    post = conn.execute('SELECT * FROM posts WHERE id = ?',
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        post = conn.execute('SELECT * FROM posts WHERE id = ?',
                         (post_id,)).fetchone()
-    conn.close()
     if post is None:
         abort(404)
     return post
 
 def get_all_ue():
-    conn = get_db_connection()
-    ue = conn.execute('SELECT * FROM ues').fetchall()
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        ue = conn.execute('SELECT * FROM ues').fetchall()
     return ue
 
 def get_all_college():
-    conn = get_db_connection()
-    college = conn.execute('SELECT * FROM colleges').fetchall()
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        college = conn.execute('SELECT * FROM colleges').fetchall()
     return college
 
 def get_all_items():
-    conn = get_db_connection()
-    res = conn.execute('SELECT * FROM items').fetchall()
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        res = conn.execute('SELECT * FROM items').fetchall()
     return res
 
 def get_items(ue):
-    conn = get_db_connection()
-    conn.row_factory = sqlite3.Row
-    print ('select for ue', ue)
-    rows = conn.execute('SELECT * FROM items WHERE ue_id = ?', (ue,)).fetchall()
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        rows = conn.execute('SELECT * FROM items WHERE ue_id = ?', (ue,)).fetchall()
     return json.dumps( [dict(ix) for ix in rows] )
 
 
 def get_all_lss():
-    conn = get_db_connection()
-    sql = """
-        SELECT  * FROM lss 
-        INNER JOIN items 
-        INNER JOIN colleges 
-        WHERE lss.item_id==items.item_id and lss.college_id == colleges.college_id
-        """
-
-    res = conn.execute(sql).fetchall()
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        sql = """SELECT  * FROM lss 
+            INNER JOIN items 
+            INNER JOIN colleges 
+            WHERE lss.item_id=items.item_id and lss.college_id=colleges.college_id"""
+        res = conn.execute(sql).fetchall()
     return res
 
 def get_all_lss_per_items():
@@ -65,15 +69,29 @@ def get_all_lss_per_items():
     for item in list_item:
         if item['item_id'] not in lss_per_item.keys():
             lss_per_item[item['item_id']]={}
-        lss_per_item[item['item_id']][item['date']]=dict(item)
+        lss_per_item[item['item_id']][str(item['date'])]=dict(item)
     return(lss_per_item)
 
+def insert_ls(row):
+    print (row)
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    metadata = MetaData(engine)
+    connection = engine.connect()
+    lss = Table('lss', metadata, autoload=True, autoload_with=engine)
+    ins = insert(lss).values(date=row["date"], college_id=row["college"], item_id=row["item"], serieux=row["serieux"], rang_a=row["rang_a"], rang_b=row["rang_b"])
+    res = connection.execute(ins)
+    return res
+
+
 def generate_date_range_from_ls():
-    conn = get_db_connection()
-    date_ls = conn.execute('SELECT min(date) as datemin, max(date) as datemax FROM lss').fetchone()
-    pdatemin = date.fromisoformat(date_ls['datemin'])
-    pdatemax = date.fromisoformat(date_ls['datemax'])
-    nb_days = (pdatemax - pdatemin).days
-    r_date = [(pdatemin + timedelta(days=x)).isoformat() for x in range(nb_days+1)]
-    conn.close()
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    with engine.connect() as conn:
+        date_ls = conn.execute('SELECT min(date) as datemin, max(date) as datemax FROM lss').fetchone()
+        print(f'date_ls => {date_ls}')
+        pdatemin = date.fromisoformat(str(date_ls['datemin']))
+        pdatemax = date.fromisoformat(str(date_ls['datemax']))
+        nb_days = (pdatemax - pdatemin).days
+        r_date = [(pdatemin + timedelta(days=x)).isoformat() for x in range(nb_days+1)]
     return r_date

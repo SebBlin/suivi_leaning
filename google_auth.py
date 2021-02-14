@@ -6,16 +6,17 @@ import flask
 from authlib.client import OAuth2Session
 import google.oauth2.credentials
 import googleapiclient.discovery
+from secrets import access_secret_version
 
 ACCESS_TOKEN_URI = 'https://www.googleapis.com/oauth2/v4/token'
 AUTHORIZATION_URL = 'https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&prompt=consent'
 
 AUTHORIZATION_SCOPE ='openid email profile'
 
-AUTH_REDIRECT_URI = os.environ.get("FN_AUTH_REDIRECT_URI", default=False)
-BASE_URI = os.environ.get("FN_BASE_URI", default=False)
-CLIENT_ID = os.environ.get("FN_CLIENT_ID", default=False)
-CLIENT_SECRET = os.environ.get("FN_CLIENT_SECRET", default=False)
+AUTH_REDIRECT_URI = os.environ.get("FN_AUTH_REDIRECT_URI", default=False) or access_secret_version(secret_id='FN_AUTH_REDIRECT_URI', project_id='979602309341')
+BASE_URI = os.environ.get("FN_BASE_URI", default=False) or access_secret_version(secret_id='FN_BASE_URI', project_id='979602309341')
+CLIENT_ID = os.environ.get("FN_CLIENT_ID", default=False) or access_secret_version(secret_id='FN_CLIENT_ID', project_id='979602309341')
+CLIENT_SECRET = os.environ.get("FN_CLIENT_SECRET", default=False) or access_secret_version(secret_id='FN_CLIENT_SECRET', project_id='979602309341')
 
 AUTH_TOKEN_KEY = 'auth_token'
 AUTH_STATE_KEY = 'auth_state'

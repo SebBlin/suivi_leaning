@@ -1,9 +1,13 @@
 pandas
 flask
 matplotlib
+sqlalchemy
+pymysql
+sqlparse
 
 # for Google Auth
 authlib==0.11
 google-api-python-client
+google-cloud-secret-manager
 google-auth
 virtualenv

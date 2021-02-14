@@ -21,7 +21,7 @@
                   <td>{{ row.item_name }}</th>
                   {% for date in date_range %}
                     {% if ls[row.item_id] and ls[row.item_id][date] %}
-                        <td scope="col" class="text-center bgc-{{ ls[row.item_id][date].serieux }}"><!-- {{ ls[row.item_id][date].id|e }} --> </td>
+                        <td scope="col" class="text-center bgc-{{ ls[row.item_id][date].serieux }}"> <!-- {{ ls[row.item_id][date].id|e }} --> </td>
                     {% else %}
                       <td scope="col"></td>
                     {% endif %}

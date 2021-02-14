@@ -4,7 +4,8 @@ venv
 start.sh
 database.db
 Revisions R2C.xlsx
-my_stat.py
 test.py
 templates/.DS_Store
 .DS_Store
+revision-medecine-b94ee903ec02.json
+sql_gcp/sour*

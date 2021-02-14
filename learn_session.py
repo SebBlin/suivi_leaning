@@ -1,6 +1,6 @@
 import datetime
 from flask import Blueprint, render_template, request, url_for, flash, redirect
-from util import get_all_items, get_all_ue, get_all_college, get_db_connection, get_all_lss, get_all_items, get_items
+from util import get_all_items, get_all_ue, get_all_college, get_all_lss, get_all_items, get_items, insert_ls
 import google_auth
 
 import pprint
@@ -58,16 +58,4 @@ def get_list_items_for_ue():
             print ('items for ue', list_items)
     return list_items
 
-
-
-
-def insert_ls (new_ls):
-    conn = get_db_connection()
-    res =  conn.execute("""
-    INSERT INTO lss(date, college_id, item_id, serieux, rang_a, rang_b) 
-           VALUES (:date, :college, :item, :serieux, :rang_a, :rang_b)
-    """, new_ls)
-    conn.commit()
-    conn.close()
-    return res
 
