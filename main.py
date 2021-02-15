@@ -7,6 +7,7 @@ import os
 
 import learn_session
 import google_auth
+import api
 from secrets import access_secret_version
 
 print(__name__)
@@ -15,6 +16,7 @@ app.secret_key = os.environ.get("FN_FLASK_SECRET_KEY", default=False) or access_
 
 app.register_blueprint(learn_session.my_ls)
 app.register_blueprint(google_auth.app)
+app.register_blueprint(api.api)
 
 @app.route('/')
 @google_auth.authenticated

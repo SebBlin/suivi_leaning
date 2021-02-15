@@ -5,6 +5,14 @@ from werkzeug.exceptions import abort
 from sqlalchemy import Table, insert, MetaData
 import manage_db
 
+import decimal
+import json
+import sys
+import traceback
+import types
+from datetime import datetime, date
+
+
 engine = None
 
 def get_db_engine():
@@ -89,9 +97,38 @@ def generate_date_range_from_ls():
     engine = engine or manage_db.init_connection_engine()
     with engine.connect() as conn:
         date_ls = conn.execute('SELECT min(date) as datemin, max(date) as datemax FROM lss').fetchone()
-        print(f'date_ls => {date_ls}')
+        #print(f'date_ls => {date_ls}')
         pdatemin = date.fromisoformat(str(date_ls['datemin']))
         pdatemax = date.fromisoformat(str(date_ls['datemax']))
         nb_days = (pdatemax - pdatemin).days
         r_date = [(pdatemin + timedelta(days=x)).isoformat() for x in range(nb_days+1)]
     return r_date
+
+class CustomEncoder(json.JSONEncoder):
+    """
+    Internal class used for serialization of types not supported in json.
+    """
+
+    def default(self, o):
+        if types.FunctionType == type(o):
+            return o.__name__
+        # sets become lists
+        if isinstance(o, set):
+            return list(o)
+        # date times become strings
+        if isinstance(o, datetime):
+            return o.isoformat()
+        if isinstance(o, date):
+            return o.isoformat()
+        if isinstance(o, decimal.Decimal):
+            return float(o)
+        if isinstance(o, type):
+            return str(o)
+        if isinstance(o, Exception):
+            return str(o)
+        if isinstance(o, set):
+            return str(o, 'utf-8')
+        if isinstance(o, bytes):
+            return str(o, 'utf-8')
+        
+        return json.JSONEncoder.default(self, o)

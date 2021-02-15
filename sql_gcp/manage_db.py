@@ -68,10 +68,10 @@ def init_tcp_connection_engine(db_config):
     # Remember - storing secrets in plaintext is potentially unsafe. Consider using
     # something like https://cloud.google.com/secret-manager/docs/overview to help keep
     # secrets secret.
-    db_user = os.environ["DB_USER"]
-    db_pass = os.environ["DB_PASS"]
-    db_name = os.environ["DB_NAME"]
-    db_host = os.environ["DB_HOST"]
+    db_user = os.environ.get("DB_USER") or access_secret_version(secret_id='DB_USER', project_id='979602309341')
+    db_pass = os.environ.get("DB_PASS") or access_secret_version(secret_id='DB_PASS', project_id='979602309341')
+    db_name = os.environ.get("DB_NAME") or access_secret_version(secret_id='DB_NAME', project_id='979602309341')
+    db_host = os.environ.get("DB_HOST")
 
     # Extract host and port from db_host
     host_args = db_host.split(":")
@@ -100,11 +100,11 @@ def init_unix_connection_engine(db_config):
     # Remember - storing secrets in plaintext is potentially unsafe. Consider using
     # something like https://cloud.google.com/secret-manager/docs/overview to help keep
     # secrets secret.
-    db_user = os.environ["DB_USER"]
-    db_pass = os.environ["DB_PASS"]
-    db_name = os.environ["DB_NAME"]
+    db_user = os.environ.get("DB_USER") or access_secret_version(secret_id='DB_USER', project_id='979602309341')
+    db_pass = os.environ.get("DB_PASS") or access_secret_version(secret_id='DB_PASS', project_id='979602309341')
+    db_name = os.environ.get("DB_NAME") or access_secret_version(secret_id='DB_NAME', project_id='979602309341')
     db_socket_dir = os.environ.get("DB_SOCKET_DIR", "/cloudsql")
-    cloud_sql_connection_name = os.environ["CLOUD_SQL_CONNECTION_NAME"]
+    cloud_sql_connection_name = os.environ.get("CLOUD_SQL_CONNECTION_NAME")
 
     pool = sqlalchemy.create_engine(
         # Equivalent URL:
