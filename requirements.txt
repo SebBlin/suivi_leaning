@@ -4,6 +4,7 @@ matplotlib
 sqlalchemy
 pymysql
 sqlparse
+bokeh
 
 # for Google Auth
 authlib==0.11

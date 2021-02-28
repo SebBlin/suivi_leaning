@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.23/fc-3.3.2/fh-3.1.8/r-2.2.7/rg-1.1.2/datatables.min.css"/>
     <link rel="stylesheet" type="text/css"  href="static/css/style.css" >
-       
+    {% block other_resources %} {% endblock %}
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
@@ -28,10 +28,10 @@
             </li>
             </ul>
             <div class="pe-xl">
-              <a href="{{ url_for('google_auth.login') }}" class="btn btn-info me-xl" role="button">Login</a>
+              <a href="{{ url_for('google_auth.login') }}" class="btn btn-info float-right" role="button">Login</a>
             </div>
             <div class="pe-xl">
-              <a href="{{ url_for('google_auth.logout') }}" class="btn btn-info me-xl" role="button">Logout</a>
+              <a href="{{ url_for('google_auth.logout') }}" class="btn btn-info float-right" role="button">Logout</a>
             </div>
         </div>
     </nav>

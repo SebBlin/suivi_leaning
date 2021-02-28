@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block other_resources %} {{ resources|safe }} {% endblock %}
+
+{% block content %}
+
+<h1>{% block title %} Les diagrams  {% endblock %}</h1>
+
+  <div id="myplot"></div>
+  <script>
+  fetch('{{ prefix }}/plot')
+    .then(function(response) { return response.json(); })
+    .then(function(item) { return Bokeh.embed.embed_item(item); })
+  </script>
+  <script>
+  fetch('{{ prefix }}/plot2')
+    .then(function(response) { return response.json(); })
+    .then(function(item) { return Bokeh.embed.embed_item(item, "myplot2"); })
+  </script>
+
+{% endblock %}

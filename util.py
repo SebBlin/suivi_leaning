@@ -1,17 +1,12 @@
 import json
-from datetime import timedelta, date
+from json import JSONEncoder
+from datetime import timedelta, date, datetime
 from werkzeug.exceptions import abort
+from flask import jsonify
 
 from sqlalchemy import Table, insert, MetaData
 import manage_db
-
-import decimal
-import json
-import sys
-import traceback
-import types
-from datetime import datetime, date
-
+import pandas as pd
 
 engine = None
 
@@ -71,6 +66,23 @@ def get_all_lss():
         res = conn.execute(sql).fetchall()
     return res
 
+def get_all_lss_to_pd():
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    sql = """SELECT  * FROM lss 
+        INNER JOIN items 
+        INNER JOIN colleges 
+        WHERE lss.item_id=items.item_id and lss.college_id=colleges.college_id"""
+    df = pd.read_sql(sql, engine.connect())
+    return df
+
+def df_from_sql(sql):
+    global engine
+    engine = engine or manage_db.init_connection_engine()
+    df = pd.read_sql(sql, engine.connect())
+    return df
+
+
 def get_all_lss_per_items():
     lss_per_item = {}
     list_item = get_all_lss()
@@ -104,31 +116,5 @@ def generate_date_range_from_ls():
         r_date = [(pdatemin + timedelta(days=x)).isoformat() for x in range(nb_days+1)]
     return r_date
 
-class CustomEncoder(json.JSONEncoder):
-    """
-    Internal class used for serialization of types not supported in json.
-    """
-
-    def default(self, o):
-        if types.FunctionType == type(o):
-            return o.__name__
-        # sets become lists
-        if isinstance(o, set):
-            return list(o)
-        # date times become strings
-        if isinstance(o, datetime):
-            return o.isoformat()
-        if isinstance(o, date):
-            return o.isoformat()
-        if isinstance(o, decimal.Decimal):
-            return float(o)
-        if isinstance(o, type):
-            return str(o)
-        if isinstance(o, Exception):
-            return str(o)
-        if isinstance(o, set):
-            return str(o, 'utf-8')
-        if isinstance(o, bytes):
-            return str(o, 'utf-8')
-        
-        return json.JSONEncoder.default(self, o)
+def cvt_to_dict(l):
+    return [(dict(i.items())) for i in l]
