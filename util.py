@@ -60,8 +60,8 @@ def get_all_lss():
     engine = engine or manage_db.init_connection_engine()
     with engine.connect() as conn:
         sql = """SELECT  * FROM lss 
-            INNER JOIN items 
-            INNER JOIN colleges 
+            INNER JOIN items ON lss.item_id=items.item_id
+            INNER JOIN colleges ON lss.college_id = colleges.college_id
             WHERE lss.item_id=items.item_id and lss.college_id=colleges.college_id"""
         res = conn.execute(sql).fetchall()
     return res
@@ -69,9 +69,9 @@ def get_all_lss():
 def get_all_lss_to_pd():
     global engine
     engine = engine or manage_db.init_connection_engine()
-    sql = """SELECT  * FROM lss 
-        INNER JOIN items 
-        INNER JOIN colleges 
+    sql = """SELECT  lss.* FROM lss 
+        INNER JOIN items ON item_id
+        INNER JOIN colleges ON college_id
         WHERE lss.item_id=items.item_id and lss.college_id=colleges.college_id"""
     df = pd.read_sql(sql, engine.connect())
     return df

@@ -21,6 +21,23 @@ from secrets import access_secret_version
 
 
 def init_connection_engine():
+    from os import environ
+
+    gcp_project = 'revision-medecine'
+    bigquery_dataset = 'learning_sessions'
+    cred_path = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
+
+    bigquery_uri = f'bigquery://{gcp_project}/{bigquery_dataset}'
+
+    engine = sqlalchemy.create_engine(
+        bigquery_uri,
+        credentials_path = cred_path
+        )
+    return engine
+
+
+
+def init_connection_engine2():
     db_config = {
         # [START cloud_sql_mysql_sqlalchemy_limit]
         # Pool size is the maximum number of permanent connections to keep.

@@ -9,4 +9,5 @@ templates/.DS_Store
 .DS_Store
 revision-medecine-b94ee903ec02.json
 sql_gcp/sour*
+sql_gcp/export
 util.pyc

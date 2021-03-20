@@ -32,6 +32,26 @@ def index():
     #print(json.dumps(list_ls, indent=2))
     return render_template('index.html', items=list_items, ls=list_ls, date_range=liste_date)
 
+@app.route('/i2')
+@google_auth.authenticated
+def index2():
+    # Sho all items with Learning session 
+    list_items = get_all_items()
+    list_ls = get_all_lss_per_items()
+    liste_date = generate_date_range_from_ls()
+    print(list_ls)
+    #print(json.dumps(list_ls, indent=2))
+    return render_template('index2.html', items=list_items, ls=list_ls, date_range=liste_date)
+
+
+@app.route('/test')
+@google_auth.authenticated
+def test():
+    liste_date = generate_date_range_from_ls()
+    #print(json.dumps(list_ls, indent=2))
+    return render_template('test.html', date_range=liste_date)
+
+
 @app.route('/noauth')
 def noauth():
     return render_template('landing_login.html')

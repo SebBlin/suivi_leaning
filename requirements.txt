@@ -3,6 +3,7 @@ flask
 matplotlib
 sqlalchemy
 pymysql
+pybigquery
 sqlparse
 bokeh
 

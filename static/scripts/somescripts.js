@@ -12,7 +12,6 @@ function configureListItems(selUE, selItems) {
             $.each(JSON.parse(data), function(i,v){createOption(selItems,v.item_name, v.item_id)});
       });
 }
-
 	
 $(document).ready(function() {
     $('#example').DataTable( {
@@ -26,4 +25,44 @@ $(document).ready(function() {
         render: $.fn.dataTable.render.ellipsis(15)
     } ]
     } );
-  } );
+} );
+
+var columns = [];
+
+function getDT() {
+    $.ajax({
+      url: "/api/cols",
+      success: function (data) {
+        data = JSON.parse(data);
+        columnNames = Object.keys(data);
+        for (var i in data) {
+          columns.push({data: data[i], 
+                    title: capitalizeFirstLetter(data[i])});
+        }
+	    $('#list_items').DataTable( {
+		    processing: true,
+		    serverSide: false,
+            scrollY:        '50vh',
+            scrollX: true,
+            scrollCollapse: true,
+            paging:         false,
+            ordering: false,
+            columnDefs: [ {
+                targets: 1,
+                render: $.fn.dataTable.render.ellipsis(15)
+            } ],
+              
+		    ajax: "/api/lls",
+		    columns: columns
+	    } );
+      }
+    });
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+$(document).ready(function() {
+   getDT();
+} );
