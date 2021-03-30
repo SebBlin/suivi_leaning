@@ -1,5 +1,5 @@
 import datetime
-from flask import Blueprint, render_template, request, url_for, flash, redirect
+from flask import Blueprint, render_template, request, url_for, flash, redirect, session
 from util import get_all_items, get_all_ue, get_all_college, get_all_lss, get_all_items, get_items, insert_ls
 import google_auth
 
@@ -27,7 +27,7 @@ def create():
                     'rang_b':   True if request.form.get('rang_b') else False,
                    }
         pprint.pprint(new_row)
-        res = insert_ls(new_row)
+        res = insert_ls(new_row, session['user'])
         if res:
             flash('Nouvelle session enregistrée!', category='info')
         else:

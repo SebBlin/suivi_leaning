@@ -22,7 +22,7 @@ from util import df_from_sql
 
 uri_prefix = '/diagrams'
 
-diagrams = flask.Blueprint('digrams', __name__)
+diagrams = flask.Blueprint('diagrams', __name__)
 
 
 
@@ -48,7 +48,7 @@ def plot():
     sql= """SELECT * FROM items
             LEFT JOIN 
             (SELECT  item_id, college_id,  AVG(mlss.age) as avg_age, AVG(mlss.serieux) as avg_serieux, COUNT(id) as nb_item FROM 
-                (SELECT id, item_id, college_id,  serieux, DATEDIFF(CURDATE(), `date`) as age from lss) as mlss
+                (SELECT id, item_id, college_id,  serieux, DATE_DIFF(CURRENT_DATE(), `date`, DAY) as age from lss) as mlss
             GROUP BY item_id, college_id) AS item_synt
             ON items.item_id = item_synt.item_id
             LEFT JOIN colleges

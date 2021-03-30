@@ -92,14 +92,21 @@ def get_all_lss_per_items():
         lss_per_item[item['item_id']][str(item['date'])]=dict(item)
     return(lss_per_item)
 
-def insert_ls(row):
+def insert_ls(row, user):
     print (row)
     global engine
     engine = engine or manage_db.init_connection_engine()
     metadata = MetaData(engine)
     connection = engine.connect()
     lss = Table('lss', metadata, autoload=True, autoload_with=engine)
-    ins = insert(lss).values(date=row["date"], college_id=row["college"], item_id=row["item"], serieux=row["serieux"], rang_a=row["rang_a"], rang_b=row["rang_b"])
+    ins = insert(lss).values(created=datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f"),
+                             date=row["date"], 
+                             college_id=row["college"], 
+                             item_id=int(row["item"]), 
+                             serieux=int(row["serieux"]), 
+                             rang_a=bool(row["rang_a"]), 
+                             rang_b=bool(row["rang_b"]) ,
+                             user=user)
     res = connection.execute(ins)
     return res
 

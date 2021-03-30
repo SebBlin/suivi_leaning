@@ -6,7 +6,6 @@
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">date</th>
                 <th scope="col">UE</th>
                 <th scope="col">College</th>
@@ -19,7 +18,6 @@
             <tbody>
                 {% for row in row_data %}
                 <tr>
-                  <th scope="col">{{ row.id }}</th>
                   <td>{{ row['date'] }}</th>
                   <td>{{ row['ue_id'] }}</th>
                   <td>{{ row['college_name'] }}</th>

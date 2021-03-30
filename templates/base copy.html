@@ -13,20 +13,23 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('index')}}">Suivi médecine</a>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{ url_for('index') }}">Home</a>
-              <a class="nav-item nav-link" href="{{ url_for('learning_session.create') }}">New Learning Session</a>
-              <a class="nav-item nav-link" href="{{ url_for('diagrams.root') }}">Diagrams</a>
-              <div class="pe-xl">
-                <a href="{{ url_for('google_auth.login') }}" class="btn btn-info float-right" role="button">Login</a>
-              </div>
-              <div class="pe-xl">
-                <a href="{{ url_for('google_auth.logout') }}" class="btn btn-info float-right" role="button">Logout</a>
-              </div>
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('learning_session.create')}}">New Learning Session</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('diagrams.root')}}">Diagrams</a>
+          </li>
+          <div class="pe-xl">
+              <a href="{{ url_for('google_auth.login') }}" class="btn btn-info float-right" role="button">Login</a>
             </div>
+            <div class="pe-xl">
+              <a href="{{ url_for('google_auth.logout') }}" class="btn btn-info float-right" role="button">Logout</a>
+            </div>
+          </ul>
         </div>
     </nav>
     <div class="container-fluid">

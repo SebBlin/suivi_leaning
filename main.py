@@ -1,5 +1,5 @@
 import my_stat
-from flask import Flask, render_template, request, url_for, flash, redirect
+from flask import Flask, render_template, request, url_for, flash, redirect, session
 import pprint
 from util import generate_date_range_from_ls, get_all_lss, get_all_lss_per_items, get_all_items
 import json
@@ -28,7 +28,8 @@ def index():
     list_items = get_all_items()
     list_ls = get_all_lss_per_items()
     liste_date = generate_date_range_from_ls()
-    print(list_ls)
+    #print(list_ls)
+    print(f'user connected : {session.get("user")}')
     #print(json.dumps(list_ls, indent=2))
     return render_template('index.html', items=list_items, ls=list_ls, date_range=liste_date)
 
