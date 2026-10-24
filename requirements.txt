@@ -8,7 +8,7 @@ sqlparse
 bokeh
 
 # for Google Auth
-authlib==0.11
+authlib==1.6.12
 google-api-python-client
 google-cloud-secret-manager
 google-auth
